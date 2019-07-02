@@ -15,6 +15,8 @@
           = link_to "Blog", posts_path, class: "nav-link"
         -if current_user
           %li.nav-item
+            = link_to "My Blog", login_posts_path, class: "nav-link"
+          %li.nav-item
             = link_to "Edit User", edit_user_registration_path, class: "nav-link"
           %li.nav-item
             = link_to "Sign-out", destroy_user_session_path, method: :delete, class: "nav-link"

@@ -11,8 +11,8 @@
       %tr
         %td= post.subject
         %td= post.content
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Show', [:login, post]
+        %td= link_to 'Edit', edit_login_post_path(post)
+        %td= link_to 'Destroy', [:login, post], method: :delete, data: { confirm: 'Are you sure?' }
 %br/
-= link_to 'New Post', new_post_path
+= link_to 'New Post', new_login_post_path

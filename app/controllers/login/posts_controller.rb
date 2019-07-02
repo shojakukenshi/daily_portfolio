@@ -4,7 +4,7 @@ class Login::PostsController < Login::ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = current_user.posts.all
   end
 
   # GET /posts/1
@@ -14,7 +14,7 @@ class Login::PostsController < Login::ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   # GET /posts/1/edit
@@ -24,7 +24,7 @@ class Login::PostsController < Login::ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
 
     respond_to do |format|
       if @post.save
@@ -64,7 +64,7 @@ class Login::PostsController < Login::ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      @post = current_user.posts.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
