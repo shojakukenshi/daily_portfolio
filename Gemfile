@@ -33,6 +33,7 @@ gem 'jquery-rails'
 gem "bootstrap_form", ">= 4.2.0"
 gem "haml-rails", "~> 2.0"
 
+gem 'devise'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
