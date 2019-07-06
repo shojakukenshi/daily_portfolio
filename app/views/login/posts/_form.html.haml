@@ -1,5 +1,7 @@
 = bootstrap_form_for [:login, post] do |form|
   = form.text_field :subject
   = form.text_area :content
+  = form.file_field :image
+  = form.hidden_field :image_cache
   .actions
     = form.submit

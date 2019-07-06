@@ -5,6 +5,10 @@
 %p
   %strong Content:
   = @post.content
+%p
+  %strong Image:
+  -if @post.image?
+    = image_tag @post.image_url
 = link_to 'Edit', edit_login_post_path(@post)
 |
 = link_to 'Back', login_posts_path
