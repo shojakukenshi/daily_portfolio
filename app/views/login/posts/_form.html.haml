@@ -3,5 +3,8 @@
   = form.text_area :content
   = form.file_field :image
   = form.hidden_field :image_cache
+  -if post.image?
+    = image_tag post.image_url, width: 200
+    = form.check_box :remove_image
   .actions
     = form.submit

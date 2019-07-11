@@ -41,6 +41,7 @@ class Login::PostsController < Login::ApplicationController
   # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
+      # binding.pry
       if @post.update(post_params)
         format.html { redirect_to [:login, @post], notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
@@ -73,7 +74,8 @@ class Login::PostsController < Login::ApplicationController
         :subject,
         :content,
         :image,
-        :image_cache
+        :image_cache,
+        :remove_image
       )
     end
 end
