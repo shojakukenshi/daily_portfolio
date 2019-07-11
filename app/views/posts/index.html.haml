@@ -11,4 +11,7 @@
       %tr
         %td= post.subject
         %td= post.content
+        %td
+          -if post.image?
+            = image_tag post.image_url(:thumb)
         %td= link_to 'Show', post
