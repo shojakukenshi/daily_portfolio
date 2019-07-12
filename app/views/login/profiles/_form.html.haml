@@ -1,0 +1,12 @@
+= bootstrap_form_for [:login, profile], url: login_profile_path do |form|
+  = form.hidden_field :id
+  = form.text_field :first_name
+  = form.text_field :last_name
+  = form.text_area :introduction
+  = form.file_field :image
+  = form.hidden_field :image_cache
+  -if profile.image?
+    = image_tag profile.image_url, width: 200
+    = form.check_box :remove_image
+  .actions
+    = form.submit

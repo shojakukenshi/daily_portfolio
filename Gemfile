@@ -38,6 +38,8 @@ gem 'cloudinary'
 # gem 'mini_magick'
 
 gem 'devise'
+
+gem 'kaminari'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

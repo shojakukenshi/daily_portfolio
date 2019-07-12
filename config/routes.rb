@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   namespace :login do
     resources :posts
+    resource :profile, only: [:show, :create, :edit, :update]
   end
   resources :posts, only: [:index, :show]
 end
