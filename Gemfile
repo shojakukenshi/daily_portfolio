@@ -33,7 +33,7 @@ gem 'jquery-rails'
 gem "bootstrap_form", ">= 4.2.0"
 gem "haml-rails", "~> 2.0"
 
-gem 'carrierwave', '1.3.1'
+gem 'carrierwave', '1.3.2'
 gem 'cloudinary'
 # gem 'mini_magick'
 
